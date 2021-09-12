@@ -110,3 +110,8 @@ As result, 2 files will be added to models directory, the first has ".json" exte
 
 ### Dashboard Management :
 Basically, the dashboard created is a flask application, the choice between **Dashboard-48** & **Dashboard-224** depends on the model training strategy, the fisrt  requires model generated based 48x48 grayscale images [Fer2013](),While the other is perfectly coherent with models trained using 224x224 colored images [AffectNet](). And keep in mind that there is some critical differences between the 2 dashboards ***So pay attention to the model choice***.
+
+The first thing you do is to set a virtual python environnement based on the **requirements.txt** existing in the main directory along side with other sub directories. After activating the env, we run the following command :
+```
+python Dashboard-XX/app.py
+```
