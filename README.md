@@ -100,7 +100,8 @@ from now on we will use 2 newly generated directories, **dataset** for training 
 > EMOTIONS_LIST = [ 'Neutral' : 0, 'Happy' : 1, 'Sad' : 2, 'Surprise' : 3, 'Fear' : 4, 'Disgust' : 5, 'Anger' : 6, 'Contempt' : 7
 
 ##### Model Training :
-In the opposit of the baseline model, here we gonna use line commands to personnalize/automate/personnalize the training process, the line command is :
+Contrary to the baseline model, here we gonna use line commands to personnalize/automate/personnalize the training process, the line command is :
 ```
 python tee.py --model [VGG16, Resnet50, Xception, InceptionV3, MobileNetV2, MobileNet] --epochs [Number of epochs] --weights path/to/weights/file
 ```
+This command permit to user to choose among 6 pre-built architectures - You can add any other architecture by personnalizing the code in **modelTrain.py** -  Also we may define epochs number and weights file if it has been already existed. The default value for epochs [weights] is 30 [None]
