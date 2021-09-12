@@ -107,3 +107,6 @@ python tee.py --model [VGG16, Resnet50, Xception, InceptionV3, MobileNetV2, Mobi
 This command permit to user to choose among 6 pre-built architectures - You can add any other architecture by personnalizing the code in **modelTrain.py** -  Also we may define epochs number and weights file if it has been already existed. The default value for epochs [weights] is 30 [None]
 
 As result, 2 files will be added to models directory, the first has ".json" extension, it refers to the model architecture, the second ends by ".h5" it contains the saved weights after the training process.
+
+### Dashboard Management :
+Basically, the dashboard created is a flask application, the choice between **Dashboard-48** & **Dashboard-224** depends on the model training strategy, the fisrt  requires model generated based 48x48 grayscale images [Fer2013](),While the other is perfectly coherent with models trained using 224x224 colored images [AffectNet](). And keep in mind that there is some critical differences between the 2 dashboards ***So pay attention to the model choice***.
