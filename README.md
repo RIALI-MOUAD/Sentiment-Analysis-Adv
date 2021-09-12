@@ -117,4 +117,8 @@ python Dashboard-XX/app.py
 ```
 The flask app will be launched on the localhost automatically, the main page will be like this:
 ![index](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/index.jpg)
+
 ![index](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/index2.jpg)
+
+The first thing to do is to submit the wanted video, or if you have the full access to server, you may add it directly to **Videos** folder. Second, we choose the video from the second case, and we click on submit. Now the app will process the frames to generate in the end a csv dataset that summarizes for each frame the propotions of the different considered emotions depending on the used model.
+![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/chooseVid.png)
