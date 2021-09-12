@@ -79,4 +79,9 @@ drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 test
 drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 train
 drwxrwxr-x 4 mouad mouad   4096 يوليوز 14 11:51 utils
 ```
-***train*** and ***test*** folders contain the training and validation data, utils contains functions used to support the training process, 
+***train*** and ***test*** folders contain the training and validation data, utils contains functions used to support the training process, To start model training you better create new virtual environnemnt and install the requirements listed in ***reqs.txt**, the following command may make it easier :
+```
+python3 -m venv /path/to/new/virtual/environment
+source /path/to/new/virtual/environment/bin/activate
+python3 -m pip install -r requirements.txt
+```
