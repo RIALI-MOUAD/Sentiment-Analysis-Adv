@@ -78,5 +78,5 @@ To start the training, You have first to extract ***Fer2013.tar.xz***, here what
 drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 test
 drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 train
 drwxrwxr-x 4 mouad mouad   4096 يوليوز 14 11:51 utils
-
 ```
+***train*** and ***test*** folders contain the training and validation data, utils contains functions used to support the training process, 
