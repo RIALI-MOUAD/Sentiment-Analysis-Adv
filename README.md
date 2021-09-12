@@ -71,4 +71,12 @@ Non-trainable params: 3,456
 _________________________________________________________________
 ```
 The database used here is ***Fer2013*** , it consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centred and occupies about the same amount of space in each image. The training set consists of 28,709 examples and the public test set consists of 3,589 examples. The model task is to categorize each face based on the emotion shown in the facial expression into one of seven categories (Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral).
+To start the training, You have first to extract ***Fer2013.tar.xz***, here what you will find after extraction :
+```bash
+-rw-rw-r-- 1 mouad mouad 710530 شتنبر  11 09:11 Facial_Expression_Training.ipynb
+-rw-rw-r-- 1 mouad mouad   6365 شتنبر  11 09:41 reqs.txt
+drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 test
+drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 train
+drwxrwxr-x 4 mouad mouad   4096 يوليوز 14 11:51 utils
 
+```
