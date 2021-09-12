@@ -6,7 +6,7 @@ This project has 2 basic parts, The first is related to model training while the
 To train appropriate models to well visualize/Annalyse Sentiments, I tried 2 approaches : Baseline Model and complicated ones.
 #### Baseline Model :
 It is a simple CNN, The convultional part has 4 Convultionnal layers, 
-'''
+```
 Model: "sequential_3"
 _________________________________________________________________
 Layer (type)                 Output Shape              Param #   
@@ -69,4 +69,5 @@ Total params: 4,346,631
 Trainable params: 4,343,175
 Non-trainable params: 3,456
 _________________________________________________________________
-'''
+```
+
