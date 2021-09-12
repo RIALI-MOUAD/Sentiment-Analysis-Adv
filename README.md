@@ -88,3 +88,7 @@ python3 -m pip install -r reqs.txt
 After that, you launch jupyter notebook to begin the training process.
 
 #### Advanced Models :
+After generating a baseline model, we will try to generate more advanced models and complicated ones, training them using more efficient Database: **AffectNet** eventhought we will use just a sample containing like 300000 colored 224x224 images annoated manually.
+##### Database preprocessing:
+The initial architecture of the database demand a sort of processing to make it coherent with Annalysis and predicting tools. Here in bellow you find AffectNet Architecture as offered by the owner: To download the sample click ![here]() 
+
