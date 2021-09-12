@@ -3,7 +3,7 @@
 ## General Architecture :
 This project has 2 basic parts, The first is related to model training while the second one is about Dashboard management and Data visualisation.
 ### Model training :
-To train appropriate models to well visualize/Annalyse Sentiments, I tried 2 approaches : Baseline Model and complicated ones.
+To train appropriate models to well visualize/Annalyse Sentiments, I tried 2 approaches : Baseline Model and Advanced ones.
 #### Baseline Model :
 It is a simple CNN, The convultional part has 4 Convultionnal layers, besides, I used maximum function in the pooling part. On the other hand, there is 2 dense layers, the last one is activated by softmax function. The embeded text shows the general structure of the baselone model:
 ```
@@ -83,5 +83,8 @@ drwxrwxr-x 4 mouad mouad   4096 يوليوز 14 11:51 utils
 ```
 python3 -m venv /path/to/new/virtual/environment
 source /path/to/new/virtual/environment/bin/activate
-python3 -m pip install -r requirements.txt
+python3 -m pip install -r reqs.txt
 ```
+After that, you launch jupyter notebook to begin the training process.
+
+#### Advanced Models :
