@@ -102,4 +102,5 @@ from now on we will use 2 newly generated directories, **dataset** for training 
 ##### Model Training :
 In the opposit of the baseline model, here we gonna use line commands to personnalize/automate/personnalize the training process, the line command is :
 ```
-python tee.py --model [] --epochs --weights
+python tee.py --model [VGG16, Resnet50, Xception, InceptionV3, MobileNetV2, MobileNet] --epochs [Number of epochs] --weights path/to/weights/file
+```
