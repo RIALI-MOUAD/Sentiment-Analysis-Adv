@@ -117,3 +117,4 @@ python Dashboard-XX/app.py
 ```
 The flask app will be launched on the localhost automatically, the main page will be like this:
 ![index](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/index.jpg)
+![index](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/index2.jpg)
