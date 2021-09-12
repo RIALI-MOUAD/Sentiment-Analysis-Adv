@@ -129,3 +129,9 @@ After generating the dataset, you must select the appropriate dataset and submit
 
 > ET Voila !!!
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/chooseVid4.png)
+
+#### Charts visualization :
+
+For the visualization part, I choose to work with ***Plotly JS*** to easily maintain the coherence in term of efficency & convenience between ***Flask*** and the different automatically generated charts. in the comming parts, I will present charts generated from a random video that has been already submited.
+##### Line Chart :
+![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts1.png)
