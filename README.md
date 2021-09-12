@@ -96,5 +96,10 @@ The initial architecture of the database demand a sort of processing to make it 
 3. run ***genDataset.ipynb*** to prepare more efficient version of the training set.
 4. run ***genDataset-Val.ipynb*** to prepare more efficient version of the validation set.
 
-from now on we will use 2 newly generated directories, **dataset** for training set, **ValSet** for validation dataset, each one contains **8** sub-directories, each one of them present a unique sentiment reffered to it by a integer between 0 and 7 included. The following dictionnary define the attached emotion and its convenient code: 
-> EMOTIONS_LIST = [ 'Neutral' : 0, 'Happy' : 1, 'Sad' : 2, 'Surprise' : 3, 'Fear' : 4, 'Disgust' : 5, 'Anger' : 6, 'Contempt' : 7]
+from now on we will use 2 newly generated directories, **dataset** for training set, **ValSet** for validation set, each one contains **8** sub-directories, each one of them present a unique sentiment reffered to it by a integer between 0 and 7 included. The following dictionnary define the attached emotion and its convenient code: 
+> EMOTIONS_LIST = [ 'Neutral' : 0, 'Happy' : 1, 'Sad' : 2, 'Surprise' : 3, 'Fear' : 4, 'Disgust' : 5, 'Anger' : 6, 'Contempt' : 7
+
+##### Model Training :
+In the opposit of the baseline model, here we gonna use line commands to personnalize/automate/personnalize the training process, the line command is :
+```
+python tee.py --model [] --epochs --weights
