@@ -115,3 +115,4 @@ The first thing you do is to set a virtual python environnement based on the **r
 ```
 python Dashboard-XX/app.py
 ```
+The flask app will be launched on the localhost automatically, the main page will be like this:
