@@ -90,5 +90,11 @@ After that, you launch jupyter notebook to begin the training process.
 #### Advanced Models :
 After generating a baseline model, we will try to generate more advanced models and complicated ones, training them using more efficient Database: **AffectNet** eventhought we will use just a sample containing like 300000 colored 224x224 images annoated manually.
 ##### Database preprocessing:
-The initial architecture of the database demand a sort of processing to make it coherent with Annalysis and predicting tools. Here in bellow you find AffectNet Architecture as offered by the owner: To download the sample click ![here]() 
+The initial architecture of the database demand a sort of processing to make it coherent with Annalysis and predicting tools.To download the sample click [here](https://1drv.ms/u/s!Alvoz4G5IaBxiKo7ZQEM7cQMX5LCzg?e=d70fTL),It is about 4GB and there are two tar archive files that need to be downloaded (train_set.tar and val_set.tar); After extract the tar files, you will find the images and corresponding labels are stored in “images” and “annotations” folders. You extract both folders and apply the following instructions :
+1. extract train_set.tar and val_set.tar into AffectNet folder.
+2. prepare new conda environnement with packages mentionned on the **requirements.txt** file.(You may notice that I used conda environnement python3)
+3. run ***genDataset.ipynb*** to prepare more efficient version of the training set.
+4. run ***genDataset-Val.ipynb*** to prepare more efficient version of the validation set.
 
+from now on we will use 2 newly generated directories, **dataset** for training set, **ValSet** for validation dataset, each one contains **8** sub-directories, each one of them present a unique sentiment reffered to it by a integer between 0 and 7 included. The following dictionnary define the attached emotion and its attached code: 
+> EMOTIONS_LIST = [ 'Neutral':0, 'Happy':1, 'Sad':2, 'Surprise':3, 'Fear':4, 'Disgust':5, 'Anger':6, 'Contempt':7]
