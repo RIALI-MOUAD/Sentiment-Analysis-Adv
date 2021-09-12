@@ -105,3 +105,5 @@ Contrary to the baseline model, here we gonna use line commands to personnalize/
 python tee.py --model [VGG16, Resnet50, Xception, InceptionV3, MobileNetV2, MobileNet] --epochs [Number of epochs] --weights path/to/weights/file
 ```
 This command permit to user to choose among 6 pre-built architectures - You can add any other architecture by personnalizing the code in **modelTrain.py** -  Also we may define epochs number and weights file if it has been already existed. The default value for epochs [weights] is 30 [None]
+
+As result, 2 files will be added to models directory, the first has ".json" extension, it refers to the model architecture, the second ends by ".h5" it contains the saved weights after the training process.
