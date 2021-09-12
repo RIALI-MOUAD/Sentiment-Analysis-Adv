@@ -5,7 +5,7 @@ This project has 2 basic parts, The first is related to model training while the
 ### Model training :
 To train appropriate models to well visualize/Annalyse Sentiments, I tried 2 approaches : Baseline Model and complicated ones.
 #### Baseline Model :
-It is a simple CNN, The convultional part has 4 Convultionnal layers, 
+It is a simple CNN, The convultional part has 4 Convultionnal layers, besides, I used maximum function in the pooling part. On the other hand, there is 2 dense layers, the last one is activated by softmax function. The embeded text shows the general structure of the baselone model:
 ```
 Model: "sequential_3"
 _________________________________________________________________
@@ -70,4 +70,5 @@ Trainable params: 4,343,175
 Non-trainable params: 3,456
 _________________________________________________________________
 ```
+The database used here is ***Fer2013*** , it consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centred and occupies about the same amount of space in each image. The training set consists of 28,709 examples and the public test set consists of 3,589 examples. The model task is to categorize each face based on the emotion shown in the facial expression into one of seven categories (Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral).
 
