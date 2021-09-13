@@ -1,11 +1,11 @@
 # Sentiment-Analysis-Adv
 
 ## General Architecture :
-This project has 2 basic parts, The first is related to model training while the second one is about Dashboard management and Data visualisation.
+This project consists of two main parts, the first is about model training while the second part is about dashboard management and data visualization.
 ### Model training :
 To train appropriate models to well visualize/Annalyse Sentiments, I tried 2 approaches : Baseline Model and Advanced ones.
 #### Baseline Model :
-It is a simple CNN, The convultional part has 4 Convultionnal layers, besides, I used maximum function in the pooling part. On the other hand, there is 2 dense layers, the last one is activated by softmax function. The embeded text shows the general structure of the baselone model:
+It is a simple CNN, the convolutional part contains 4 convolutional layers, in addition, it uses the maximum function in the pooling part. On the other hand, there are two dense layers, the latter of which is activated by the softmax function. The inline text shows the general structure of the base form:
 ```
 Model: "sequential_3"
 _________________________________________________________________
@@ -79,7 +79,7 @@ drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 test
 drwxrwxr-x 9 mouad mouad   4096 مارس   13  2020 train
 drwxrwxr-x 4 mouad mouad   4096 يوليوز 14 11:51 utils
 ```
-***train*** and ***test*** folders contain the training and validation data, utils contains functions used to support the training process, To start model training you better create new virtual environnemnt and install the requirements listed in ***reqs.txt**, the following command may make it easier :
+***train*** and ***test*** folders contain the training and validation data, ***utils*** contains functions used to support the training process, To start model training you better create new virtual environnemnt and install the requirements listed in ***reqs.txt**, the following command may make it easier :
 ```
 python3 -m venv /path/to/new/virtual/environment
 source /path/to/new/virtual/environment/bin/activate
@@ -109,7 +109,7 @@ This command permit to user to choose among 6 pre-built architectures - You can 
 As result, 2 files will be added to models directory, the first has ".json" extension, it refers to the model architecture, the second ends by ".h5" it contains the saved weights after the training process.
 
 ### Dashboard Management :
-Basically, the dashboard created is a flask application, the choice between **Dashboard-48** & **Dashboard-224** depends on the model training strategy, the fisrt  requires model generated based 48x48 grayscale images [Fer2013](),While the other is perfectly coherent with models trained using 224x224 colored images [AffectNet](). And keep in mind that there is some critical differences between the 2 dashboards ***So pay attention to the model choice***.
+Basically the created dashboard is a flask application, the choice between ** Dashboard-48 ** & ** Dashboard-224 ** depends on the model training strategy, the former requires a model generated based on '48x48 grayscale images [Fer2013] (), while the other is perfectly consistent with models trained using 224x224 colored images [AffectNet] (). And keep in mind that there are critical differences between the 2 dashboards *** So pay attention to the choice of model ***.
 
 The first thing you do is to set a virtual python environnement based on the **requirements.txt** existing in the main directory along side with other sub directories. After activating the env, we run the following command :
 ```
