@@ -131,10 +131,41 @@ After generating the dataset, you must select the appropriate dataset and submit
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/chooseVid4.png)
 
 #### Charts visualization :
+```python
+#app.py
+def chart():
+    filename = request.args['filename']
+    path = 'datasets/'+filename
+    try:
+        dataF = pd.read_csv(path)
+    except Exception as e:
+        return redirect(url_for('index',
+                         error=e))
+    dataF = dataF[['Angry','Disgust','Fear','Happy','Neutral','Sad','Surprise']]
+    pie_Chart = pie_chart(dataF)
+    radar = radar_chart(dataF)
+    return render_template('charts.html',
+                           filename=filename,means = mean_data(dataF),
+                           df = df_to_arrays(dataF),
+                           pie=pie_chart(dataF),radar=radar)
 
+```
 For the visualization part, I choose to work with ***Plotly JS*** to easily maintain the coherence in term of efficency & convenience between ***Flask*** and the different automatically generated charts. in the comming parts, I will present charts generated from a random video that has been already submited.
 ##### EasypieChart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts5.png)
+These mini-charts show the general mean of domination rates for each emotion in the video under study.
+To get this result, we calculate columns means in the csv dataset that represents domination rates in our project
+```python
+#utils.py
+def mean_data(df):
+    arr ,L= df_to_arrays(df),[]
+    for i in range(len(arr)):
+        L.append(round(np.mean(arr[i]), 2))
+        #print("%.2f" % np.mean(arr[i]))
+    L = list(np.array(L))#//np.sum(np.array(L)) * 100)
+    return [round(i,2) for i in L]
+```
+Then we define it while rendering ***charts.html*** in ***chart()*** method as you can see above.  
 ##### Line Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts1.png)
 ##### Bar Chart :
