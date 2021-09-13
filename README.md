@@ -150,6 +150,9 @@ def chart():
                            pie=pie_chart(dataF),radar=radar)
 
 ```
+```javascript
+var data = {{df|tojson}};
+```
 For the visualization part, I choose to work with ***Plotly JS*** to easily maintain the coherence in term of efficency & convenience between ***Flask*** and the different automatically generated charts. in the comming parts, I will present charts generated from a random video that has been already submited.
 ##### EasypieChart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts5.png)
@@ -184,6 +187,38 @@ Finally To present Angry mini-chart -***for exemple*** -, we add the following b
 ```
 ##### Line Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts1.png)
+As plotly.JS documentation mentionnes, We gonna retreive the data through ***chart()*** method and then we add the following code to our html template to visualize all traces
+```html
+<div class="panel-body">
+ <div id="myDiv8" class="canvas-wrapper">
+ </div>
+ <script>
+  //['Angry','Disgust','Fear','Happy','Neutral','Sad','Surprise']
+	var trace1 = {
+               x: result,
+               y: data[0],
+               type: 'scatter',
+	       name: 'Angry'
+              };
+	var trace2 = {
+               x: result,
+               y: data[1],
+               type: 'scatter',
+	       name: 'Disgust'
+              };
+	. . .					  
+	var trace7 = {
+	             x: result,
+	             y: data[6],
+	             type: 'scatter',
+		     name: 'Surprise'
+	             };
+	var data = [trace1, trace2,trace3, trace4,trace5, trace6,trace7];
+        Plotly.newPlot('myDiv8', data);
+ </script>
+</div>
+```
+
 ##### Bar Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts2.png)
 ##### Radar Chart :
