@@ -188,6 +188,7 @@ Finally To present Angry mini-chart -***for exemple*** -, we add the following b
 ```
 ##### Line Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts1.png)
+
 As plotly.JS documentation mentionnes, We gonna retreive the data through ***chart()*** method and then we add the following code to our html template to visualize all traces
 ```html
 <div class="panel-body">
@@ -222,6 +223,7 @@ As plotly.JS documentation mentionnes, We gonna retreive the data through ***cha
 
 ##### Bar Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts2.png)
+
 We will repeat the same process except here we have to adapt our code/data to plots we wish generate , for bar chart here is the code:
 ```html
 <div class="panel-body">
@@ -255,6 +257,7 @@ We will repeat the same process except here we have to adapt our code/data to pl
 ```
 ##### Radar Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts3.png)
+
 The code generating Radar chart is :
 ```html
  <div class="canvas-wrapper">
@@ -285,6 +288,7 @@ The code generating Radar chart is :
 ```
 ##### Pie Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts4.png)
+
 For Pie Chart we use :
 ```html
 <div class="canvas-wrapper">
