@@ -147,7 +147,8 @@ def chart():
     return render_template('charts.html',
                            filename=filename,means = mean_data(dataF),
                            df = df_to_arrays(dataF),
-                           pie=pie_chart(dataF),radar=radar)
+                           pie=pie_chart(dataF),
+			   radar=radar)
 
 ```
 ```javascript
@@ -221,7 +222,87 @@ As plotly.JS documentation mentionnes, We gonna retreive the data through ***cha
 
 ##### Bar Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts2.png)
+We will repeat the same process except here we have to adapt our code/data to plots we wish generate , for bar chart here is the code:
+```html
+<div class="panel-body">
+ <div id="myDiv"></div>
+  <script>
+	pieC = {{pie|tojson}};
+	var xValue = pieC[1];
+	var yValue = pieC[0];
+        var trace1 = {
+	  x:xValue,
+	  y:yValue,
+	  type: 'bar',
+          name: '',
+          marker: {
+               color: 'rgb(49,130,189)',
+               opacity: 0.5
+            }
+          };
+	var data = [trace1];
+
+        var layout = {
+          title: 'Significant Emotions',
+          xaxis: {
+          tickangle: -45
+           },
+          barmode: 'group'
+          };
+
+        Plotly.newPlot('myDiv', data, layout);
+</script></div>
+```
 ##### Radar Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts3.png)
+The code generating Radar chart is :
+```html
+ <div class="canvas-wrapper">
+  <div id="myDiv3"></div>
+    <script>
+	var radar = {{radar|tojson}};
+		data = [{
+			type: 'scatterpolar',
+			r: radar[0],
+			theta: radar[1],
+			fill: 'toself'
+			}]
+
+		layout = {
+			polar: {
+			radialaxis: {
+				visible: true,
+				range: [0, 50]
+				}
+			},
+			showlegend: false
+		 }
+
+	Plotly.newPlot("myDiv3", data, layout)
+	//Plotly.newPlot('myDiv1', data, layout, config );
+   </script>
+</div>
+```
 ##### Pie Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts4.png)
+For Pie Chart we use :
+```html
+<div class="canvas-wrapper">
+	<div id="myDiv2"></div>
+		<script>
+	    var pie = {{pie|tojson}}
+            var data = [{
+                values: pie[0],
+                labels: pie[1],
+                type: 'pie'
+               }];
+
+            var layout = {
+               height: 400,
+               width: 500
+              };
+
+            Plotly.newPlot('myDiv2', data)//, layout);
+      </script>
+</div>
+```
