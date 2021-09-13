@@ -1,4 +1,4 @@
-# Sentiment-Analysis-Adv
+# Sentiment Analysis
 
 ## General Architecture :
 This project consists of two main parts, the first is about model training while the second part is about dashboard management and data visualization.
