@@ -165,7 +165,23 @@ def mean_data(df):
     L = list(np.array(L))#//np.sum(np.array(L)) * 100)
     return [round(i,2) for i in L]
 ```
-Then we define it while rendering ***charts.html*** in ***chart()*** method as you can see above.  
+Then we define it while rendering ***charts.html*** in ***chart()*** method as you can see above. After that, we redefine it as json array in the template itself.
+```javascript
+//charts.html
+var means ={{means|tojson}};
+```
+Finally To present Angry mini-chart -***for exemple***-, we add the following block :
+```html
+<!--charts.html-->
+<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Angry</h4>
+						<div class="easypiechart" id="easypiechart-teal" data-percent="{{means[0]}}"  ><span class="percent">{{means[0]}}%</span></div>
+					</div>
+				</div>
+			</div>
+```
 ##### Line Chart :
 ![](https://github.com/RIALI-MOUAD/Summer-internship-/blob/main/charts1.png)
 ##### Bar Chart :
