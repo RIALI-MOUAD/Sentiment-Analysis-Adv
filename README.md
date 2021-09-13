@@ -170,7 +170,7 @@ Then we define it while rendering ***charts.html*** in ***chart()*** method as y
 //charts.html
 var means ={{means|tojson}};
 ```
-Finally To present Angry mini-chart -***for exemple***-, we add the following block :
+Finally To present Angry mini-chart -***for exemple*** -, we add the following block :
 ```html
 <!--charts.html-->
 <div class="col-xs-6 col-md-3">
